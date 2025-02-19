@@ -1,3 +1,5 @@
 pan
 leche
 galletitas
+banana
+manzana
