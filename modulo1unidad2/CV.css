@@ -1,0 +1,24 @@
+h1{
+    color: blueviolet;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2{
+    color: firebrick;
+    font-style: italic;
+}
+h4{
+    color: darkcyan;
+    font-family: fantasy;
+    font-style: inherit;
+}
+
+p{
+    color: gold;
+    background-color: blue;
+    font-style: italic;
+    font-size: larger;
+}
