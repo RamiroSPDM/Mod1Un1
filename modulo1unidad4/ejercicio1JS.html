@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1U4 Carrizo Ramiro</title>
+</head>
+<body>
+    <script>
+    const numero = prompt('Ingrese la distancia en metros que quiera recorrer');
+
+    if (numero <= 1000) {
+        document.write('La distancia es apropiada para ir a pie')
+    } else if (numero > 1000 && numero <= 10000) {
+        document.write('La distancia es apropiada para ir en bicicleta')
+    } else if (numero > 10000 && numero <= 30000) {
+        document.write('La distancia es apropiada para ir en colectivo')
+    } else if (numero > 30000 && numero <= 100000) {
+        document.write('La distancia es apropiada para ir en auto')
+    } else if (numero > 100000) {
+        document.write('La distancia es apropiada para ir en avión')
+    } else if (numero < 0) {
+        document.write('La distancia no puede ser negativa')
+    }
+        
+
+    </script>
+    
+</body>
+</html>
