@@ -11,6 +11,16 @@
         for (let i = 0; i < numero.length; i++) {
             console.log('tenemos el numero ' + numero[i]);
         }
+        const num1 = parseInt(prompt('Introduce un número entre 1 y 20'));
+        const num2 = parseInt(prompt('Introduce otro número entre 1 y 20'));
+
+        if (num1 > num2) {
+            console.log('El número ' + num1 + ' es el numero mas grande ');
+        } else if (num1 < num2) {
+            console.log('El número ' + num2 + ' es el numero mas grande ');
+        } else if (num1 === num2) {
+            console.log('Los números son iguales');
+        }
 
 
 
