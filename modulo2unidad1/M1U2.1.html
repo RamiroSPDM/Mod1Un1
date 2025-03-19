@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarea ramiro carrizo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="button">btr1</button>
+    <button class="button2">btr2</button>
+    <button class="button3">btr3</button>
+    <script>
+        const button = document.querySelector('.button');
+        const button2 = document.querySelector('.button2');
+        const button3 = document.querySelector('.button3');
+        button.addEventListener('click', fondo);
+        button2.addEventListener('click', fondo2);
+        button3.addEventListener('click', fondo3);
+
+        function fondo() {
+            document.body.style.backgroundColor = 'red';
+        }
+        function fondo2() {
+            document.body.style.backgroundColor = 'blue';
+        }
+        function fondo3() {
+            document.body.style.backgroundColor = 'green';
+        }
+     </script>
+</body>
+</html>
