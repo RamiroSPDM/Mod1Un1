@@ -1,0 +1,253 @@
+<div class="container-fluid">
+    <div id="home" class="row align-items-center hero">
+        <div class="col-lg-3 offset-lg-2">
+            <p>Bajada</p>
+            <h1>Somos Campeones del mundo!!</h1>
+            <p>Historia,titulos y mucho más</p>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div id="partidos" class="col-md-4 offset-md-2">
+            <h2>Ultimos Partidos</h2>
+            <ul class="lista-partidos">
+                <li><a data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="img/braarg.jpg"> Argentina
+                        4-Brasil 1</a></li>
+                <li><a data-bs-toggle="modal" data-bs-target="#exampleModal1"><img src="img/uruarg.jpg"> Uruguay
+                        0-Argentina 1</a></li>
+                <li><a data-bs-toggle="modal" data-bs-target="#exampleModal2"><img src="img/perarg.jpg"> Argentina 1-
+                        Peru 0</a></li>
+                <li><a data-bs-toggle="modal" data-bs-target="#exampleModal3"><img src="img/pararg.jpg"> Paraguay
+                        2-Argentina 1</a></li>
+                <li><a data-bs-toggle="modal" data-bs-target="#exampleModal4"><img src="img/bolarg.jpg"> Argentina
+                        6-Bolivia 0</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h2>Crea una cuenta AFA y enterate de todo!</h2>
+            <p>Recibe noticias, promociones y enterate de todo lo que pasa en la selección</p>
+            <form action="/" method="post">
+                <div class="mb-3">
+                    <label for="exampleInputNombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="exampleInputNombre" name="nombre">
+                    <div id="emailHelp" class="form-text">Pon tu nombre completo.</div>
+                    <div class="mb-3">
+                        <label for="exampleInputApellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="exampleInputApellido" name="apellido">
+                        <div id="emailHelp" class="form-text">Pon tu apellido.</div>
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="email"
+                            aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Pon un email valido para registrarte en la pagina.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                        <div id="emailHelp" class="form-text">Pon tu contraseña sin cambios.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            {{message}}
+
+        </div>
+    </div>
+    <!-- inicio del ¡Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Argentina 4-Brasil 1</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>La selección nacional goleó a Brasil con tantos de Julian Alvarez(4'),Enzo Fernandez(12'),
+                        Mac Allister(37') y Simeone(71'). Mateus Cunha(26') descontó para el scratch. </h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Ver Resumen</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Uruguay 0-Argentina 1</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>El equipo de Scaloni venció a Uruguay con un gol de Almada(68').Nico Gonzalez fue expulsado al
+                        minuto 95.</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Ver Resumen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Argentina 1-Peru 0</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>La seleccion campeona del mundo venció a Peru en la Bombonera con un gol de chilena de Lautaro
+                        Martinez(55').</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Ver Resumen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Paraguay 2-Argentina 1</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>Argentina perdió ante Paraguay con una chilena de Sanabria(33') y un cabezazo de Alderete(47').
+                        Lautaro
+                        Martinez(11') habia abierto el marcador del partido.</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Ver Resumen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Argentina 6-Bolivia 0</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>La selección rioplatense goleó a Bolivia con tantos de Messi(19';84';86'), Lautaro
+                        Martinez(43'), Julian Alvarez(48') y Almada(69').</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Ver Resumen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin del Modal -->
+    <div id="conoce-el-predio" class="row py-4">
+        <div class="col-md-4 offset-md-2">
+            <h2>Conoce el predio</h2>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.9359975690672!2d-58.528828700000005!3d-34.7823865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd02196ffbeed%3A0xca6018ee49aafed0!2sPredio%20Deportivo%20Lionel%20Andr%C3%A9s%20Messi!5e0!3m2!1ses-419!2sar!4v1743219573984!5m2!1ses-419!2sar"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="col-md-3 my-3">
+            <div class="rounded py-5 noticias">
+                <h2 class="text-center">Ultimas Noticias</h2>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="noticia">
+                                <h2>Mundial 2026</h2>
+                                <p>La selección argentina: con un plantel renovado y con
+                                    la
+                                    ilusión de volver a levantar la copa.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="noticia">
+                                <h2>Messi y la selección</h2>
+                                <p>El capitán de la selección argentina, Lionel Messi, anunció que seguirá jugando
+                                    con la
+                                    celeste y blanca hasta el mundial 2026.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="noticia">
+                                <h2>Ultimas fechas de eliminatorias</h2>
+                                <p>a falta de 4 fechas la seleccion ya esta clasificada</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <h2>Estadisticas de Argentina en las eliminatorias</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">TOP</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Partidos Jugados</th>
+                <th scope="col">Goles y asistencias</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Lionel Messi</td>
+                <td>9</td>
+                <td>6 goles 3 asist.</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Julian alvarez</td>
+                <td>14</td>
+                <td>3 goles 2 asist.</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Lautaro Martinez</td>
+                <td>12</td>
+                <td>3 goles 1 asist.</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
