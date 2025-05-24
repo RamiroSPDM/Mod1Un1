@@ -1,0 +1,13 @@
+var mysql2 = require('mysql2');
+var util = require('util');
+
+var pool = mysql2.createPool({
+    connectionLimit: 10,
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_NAME,
+});
+pool.query = util.promisify(pool.query);
+
+module.exports = pool;
