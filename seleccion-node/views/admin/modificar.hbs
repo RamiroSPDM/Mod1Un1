@@ -1,0 +1,40 @@
+<div class="container" style="marigin:100px 0">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h2>Modificar Estadistica del Jugador N°: {{estadistica.id}} </h2>
+            <form action="/admin/estadisticas/modificar" method="POST">
+                <input type="hidden" value="{{estadistica.id}}" name="id">
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input type="text" placeholder="Nombre" class="form-control" name="nombre" value="{{estadistica.nombre}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Partidos</label>
+                    <input type="number" class="form-control" name="partidos" placeholder="Partidos" value="{{estadistica.partidos}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Goles</label>
+                    <input type="number" class="form-control" name="goles" placeholder="Goles" value="{{estadistica.goles}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Asistencias</label>
+                    <input type="number" class="form-control" name="asistencias" placeholder="Asistencias" value="{{estadistica.asistencias}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Amarillas</label>
+                    <input type="number" class="form-control" name="amarillas" placeholder="Amarillas" value="{{estadistica.amarillas}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Rojas</label>
+                    <input type="number" class="form-control" name="rojas" placeholder="Rojas" value="{{estadistica.rojas}}">
+                </div>
+                <button type="submit" class="btn btn-primary">Modificar</button>
+            </form>
+            {{#if error}}
+            <h5>{{message}}</h5>
+            {{/if}}
+
+
+        </div>
+    </div>
+</div>

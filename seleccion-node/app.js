@@ -13,7 +13,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var loginRouter = require('./routes/admin/login');
-var adminRouter = require('./routes/admin/novedades');
+var adminRouter = require('./routes/admin/estadisticas');
 
 var app = express();
 
@@ -51,7 +51,7 @@ secured =  async (req, res, next) => {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
-app.use('/admin/novedades', secured, adminRouter);
+app.use('/admin/estadisticas', secured, adminRouter);
 
 
 
