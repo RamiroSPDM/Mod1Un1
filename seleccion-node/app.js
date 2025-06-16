@@ -8,12 +8,18 @@ require('dotenv').config();
 
 var session = require('express-session');
 
+var fileUpload = require('express-fileupload');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var palmaresRouter = require('./routes/palmares');
+var leyendasRouter = require('./routes/leyendas');
+var futbolLocalRouter = require('./routes/futbollocal');
 
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/estadisticas');
+
 
 var app = express();
 
@@ -46,12 +52,21 @@ secured =  async (req, res, next) => {
   }
 }
 
+app.use(fileUpload({
+  useTempFiles: true,
+  tempFileDir: '/tmp/',
+  }));
 
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/estadisticas', secured, adminRouter);
+app.use('/palmares', palmaresRouter);
+app.use('/leyendas', leyendasRouter);
+app.use('/futbollocal', futbolLocalRouter);
+
+
 
 
 

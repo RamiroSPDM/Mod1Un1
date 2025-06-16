@@ -14,7 +14,9 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Selección Argentina de Fútbol</a>
+            <a class="navbar-brand" href="/"> <img src="https://www.afa.com.ar/img/site/logo-afa-dorado.svg" alt="Logo"
+                    width="30" height="30" class="d-inline-block align-text-top">
+                Selección Argentina de Futbol</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -22,39 +24,45 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Comprar ahora</a>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Nuestras
+                            redes</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.afa.com.ar/es/">Sitio Oficial AFA</a></li>
+                            <li><a class="dropdown-item" href="https://x.com/afa">X</a></li>
+                            <li><a class="dropdown-item" href="https://www.instagram.com/afa.oficial/">Instagram</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.facebook.com/AFASeleccionArgentina">Facebook</a></li>
+
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">
                             Historia
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Titulos</a></li>
-                            <li><a class="dropdown-item" href="#">Leyendas argentinas</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="/palmares">Palmares</a></li>
+                            <li><a class="dropdown-item" href="/leyendas">Leyendas</a></li>
+                            <li><hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Actualidad</a></li>
+                            <li><a class="dropdown-item" href="/futbollocal">Futbol Local</a></li>
+
+
+
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Entradas</a>
+                        <a class="nav-link active" href="/admin/login">Soy Administrador</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
+
             </div>
         </div>
     </nav>
-  
-  {{{body}}}
+
+    {{{body}}}
 
     <footer class="text-center text-lg-start bg-light text-muted">
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">

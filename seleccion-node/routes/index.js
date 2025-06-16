@@ -2,42 +2,81 @@ var express = require('express');
 var router = express.Router();
 
 var nodemailer = require('nodemailer');
+var estadisticasModel = require('../models/estadisticasModel');
+var cloudinary = require('cloudinary').v2;
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index');
+router.get('/', async function(req, res, next) {
+
+  var estadisticas = await estadisticasModel.getEstadisticas();
+  estadisticas = estadisticas.splice(0, 6); // Limitar a las primeras 6 estadísticas
+  estadisticas = estadisticas.map(estadistica => {
+    if (estadistica.img_id) {
+      const imagen = cloudinary.url(estadistica.img_id, {
+        width: 460,
+        
+        crop: 'fill'
+      });
+      return {
+        ...estadistica,
+        imagen
+      }
+    } else {
+      return {
+        ...estadistica,
+        imagen: 'images/no-image.jpg'
+      }
+    }
+  });
+
+  res.render('index', {
+    estadisticas
+  });
 });
+      
+  
+  
+
 
 router.post('/', async (req, res, next) => {
   
-var email = req.body.email;
-var password = req.body.password;
 var nombre = req.body.nombre;
 var apellido = req.body.apellido;
+var email = req.body.email;
+var telefono = req.body.tel;
+var mensaje = req.body.mensaje;
 
 console.log(req.body)
-
-if (!email || !password || !nombre || !apellido) {
-  return res.status(400).send('Faltan datos');
+if (!nombre || !apellido || !email || !telefono || !mensaje) {
+  return res.render('index', { 
+    message: 'Por favor, complete todos los campos.' });
 }
+ 
+
 
 var obj = {
   to: 'ramirocarrizo@gmail.com',
-  subject: 'Nuevo registro',
-  html: nombre + ' ' + apellido + ' se ha registrado correctamente con el email: ' + email + ' y la contraseña del usuario es: ' + password
-}
+  subject: 'Contacto desde la web',
+  html: nombre + ' ' + apellido + ' se ha registrado correctamente con el email: ' + email + '<br> y el telefono: ' + telefono + '. <br> y dejo el siguiente mensaje: ' + mensaje
+};
 
-  var transport= nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
+  var transporter = nodemailer.createTransport({
+    host: process.env.STMP_HOST,
     port: process.env.SMTP_PORT,
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS
     }
   });
-  var info = await transport.sendMail(obj);
 
-  res.render('index', { message: 'se ha registrado de forma correcta' });
+
+
+
+  var info = await transporter.sendMail(obj);
+
+  res.render('index', { 
+    message: 'El mensaje fue enviado correctamente, Gracias!' });
+  console.log(info);
 
 });
 

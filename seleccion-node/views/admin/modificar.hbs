@@ -2,11 +2,15 @@
     <div class="row">
         <div class="col-6 offset-3">
             <h2>Modificar Estadistica del Jugador N°: {{estadistica.id}} </h2>
-            <form action="/admin/estadisticas/modificar" method="POST">
+            <form action="/admin/estadisticas/modificar" method="POST" enctype="multipart/form-data">
                 <input type="hidden" value="{{estadistica.id}}" name="id">
                 <div class="form-group">
                     <label for="">Nombre</label>
                     <input type="text" placeholder="Nombre" class="form-control" name="nombre" value="{{estadistica.nombre}}">
+                </div>
+                <div class="form-group ">
+                    <label for="">Imagen</label>
+                    <input type="file" class="form-control" name="imagen" placeholder="Imagen" value="{{estadistica.imagen}}">
                 </div>
                 <div class="form-group">
                     <label for="">Partidos</label>

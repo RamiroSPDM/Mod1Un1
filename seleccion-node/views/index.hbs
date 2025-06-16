@@ -1,15 +1,19 @@
 <div class="container-fluid">
     <div id="home" class="row align-items-center hero">
         <div class="col-lg-3 offset-lg-2">
-            <p>Bajada</p>
+            <a href=""></a>
             <h1>Somos Campeones del mundo!!</h1>
             <p>Historia,titulos y mucho más</p>
         </div>
     </div>
     <div class="row my-3">
-        <div id="partidos" class="col-md-4 offset-md-2">
+        <div id="partidos" class="col-md-6 offset-md-2">
             <h2>Ultimos Partidos</h2>
             <ul class="lista-partidos">
+                <li><a data-bs-toggle="modal" data-bs-target="#exampleModal5"><img src="img/argcol.jpg"> Argentina
+                        1-1 Colombia</a></li>
+                <li><a data-bs-toggle="modal" data-bs-target="#exampleModal6"><img src="img/argchi.jpg"> Chile 0-1
+                        Argentina</a></li>
                 <li><a data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="img/braarg.jpg"> Argentina
                         4-Brasil 1</a></li>
                 <li><a data-bs-toggle="modal" data-bs-target="#exampleModal1"><img src="img/uruarg.jpg"> Uruguay
@@ -20,37 +24,86 @@
                         2-Argentina 1</a></li>
                 <li><a data-bs-toggle="modal" data-bs-target="#exampleModal4"><img src="img/bolarg.jpg"> Argentina
                         6-Bolivia 0</a></li>
+
             </ul>
         </div>
         <div class="col-md-4">
-            <h2>Crea una cuenta AFA y enterate de todo!</h2>
-            <p>Recibe noticias, promociones y enterate de todo lo que pasa en la selección</p>
-            <form action="/" method="post">
-                <div class="mb-3">
-                    <label for="exampleInputNombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="exampleInputNombre" name="nombre">
-                    <div id="emailHelp" class="form-text">Pon tu nombre completo.</div>
-                    <div class="mb-3">
-                        <label for="exampleInputApellido" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="exampleInputApellido" name="apellido">
-                        <div id="emailHelp" class="form-text">Pon tu apellido.</div>
-                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" name="email"
-                            aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">Pon un email valido para registrarte en la pagina.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-                        <div id="emailHelp" class="form-text">Pon tu contraseña sin cambios.</div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+            <h2>Danos tu opinion sobre los campeones del mundo!</h2>
+            <p>Deja tus datos y tu mensaje sobre tu experiencia viendo a la seleccion</p>
+            <form class="row g-3" action="/" method="POST">
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
+                <div class="col-md-6">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido">
+                </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="email@email.com">
+
+                </div>
+                <div class="col-12">
+                    <label for="tel" class="form-label">Tel</label>
+                    <input type="text" class="form-control" id="tel" name="tel" placeholder="11-1234-5678">
+
+                </div>
+                <div class="col-12">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
             </form>
-            {{message}}
+
 
         </div>
     </div>
     <!-- inicio del ¡Modal -->
+    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Argentina 1-1 Colombia</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>En un partido caliente, Argentina empato con un gol agonico frente a una Colombia que se mostro
+                        superior. </h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="https://www.youtube.com/watch?v=Su_tycrZMA4">
+                        <button type="button" class="btn btn-primary">Ver Resumen</button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Chile 0-1 Argentina</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>Con una Chile necesitada, la seleccion bicampeona de America se impuso por un tanto contra cero
+                    </h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="https://www.youtube.com/watch?v=hmWEOdwNx_c">
+                        <button type="button" class="btn btn-primary">Ver Resumen</button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -64,7 +117,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Ver Resumen</button>
+                    <a href="https://www.youtube.com/watch?v=s0ab0CdGWMo">
+                        <button type="button" class="btn btn-primary">Ver Resumen</button>
+                    </a>
 
                 </div>
             </div>
@@ -83,7 +138,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Ver Resumen</button>
+                    <a href="https://www.youtube.com/watch?v=Qn3dwKVRKb4">
+                        <button type="button" class="btn btn-primary">Ver Resumen</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -101,7 +158,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Ver Resumen</button>
+                    <a href="https://www.youtube.com/watch?v=xtI25ENDDSY">
+                        <button type="button" class="btn btn-primary">Ver Resumen</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -120,7 +179,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Ver Resumen</button>
+                    <a href="https://www.youtube.com/watch?v=0EVRJjy9Jvo">
+                        <button type="button" class="btn btn-primary">Ver Resumen</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -138,7 +199,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Ver Resumen</button>
+                    <a href="https://www.youtube.com/watch?v=C3wPtKNbAOA">
+                        <button type="button" class="btn btn-primary">Ver Resumen</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -166,27 +229,25 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
+
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="noticia">
-                                <h2>Mundial 2026</h2>
-                                <p>La selección argentina: con un plantel renovado y con
-                                    la
-                                    ilusión de volver a levantar la copa.</p>
+                                <h2>Baja de peso</h2>
+                                <p>Enzo Fernandez fue expulsado y se perdera su ultimo partido en el Monumental de
+                                    eliminatorias.</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item ">
                             <div class="noticia">
-                                <h2>Messi y la selección</h2>
-                                <p>El capitán de la selección argentina, Lionel Messi, anunció que seguirá jugando
-                                    con la
-                                    celeste y blanca hasta el mundial 2026.</p>
+                                <h2>La nueva joya</h2>
+                                <p>Mastantuono debuto a los 17 años y batio un record historico.</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item ">
                             <div class="noticia">
-                                <h2>Ultimas fechas de eliminatorias</h2>
-                                <p>a falta de 4 fechas la seleccion ya esta clasificada</p>
+                                <h2>Se suspende la Finalissima?</h2>
+                                <p>Argentina y España no encuentran motivos para el partido.</p>
                             </div>
                         </div>
                     </div>
@@ -201,22 +262,44 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+             
             </div>
-
-
-
+              
         </div>
-
-
-
+         <h2>Estadisticas historicas de Argentina en las eliminatorias</h2>
+         <div class="row">
+            <div class="col-12">
+                
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">TOP</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Foto</th>
+                        <th scope="col">Partidos</th>
+                        <th scope="col">Goles</th>
+                        <th scope="col">Asistencias</th>
+                        <th scope="col">Amarillas</th>
+                        <th scope="col">Rojas</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each estadisticas}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{nombre}}</td>
+                        <td>{{{imagen}}}</td>
+                        <td>{{partidos}}</td>
+                        <td>{{goles}}</td>
+                        <td>{{asistencias}}</td>
+                        <td>{{amarillas}}</td>
+                        <td>{{rojas}}</td>
+                    </tr>
+                    {{/each}}
+                    
+                    
+                </tbody>
+            </table>
     </div>
-
-
-
-
-
-
-    
-
-
 </div>

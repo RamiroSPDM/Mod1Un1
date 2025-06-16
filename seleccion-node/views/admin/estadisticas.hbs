@@ -28,7 +28,14 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Titulo</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Partidos</th>
+                        <th scope="col">Goles</th>
+                        <th scope="col">Asistencias</th>
+                        <th scope="col">Amarillas</th>
+                        <th scope="col">Rojas</th>
+                        
                         <th scope="col" class="text-right">Acciones</th>
                     </tr>
                 </thead>
@@ -38,6 +45,12 @@
                     <tr>
                         <th scope="row">{{id}}</th>
                         <td>{{nombre}}</td>
+                        <td>{{{imagen}}}</td>
+                        <td>{{partidos}}</td>
+                        <td>{{goles}}</td>
+                        <td>{{asistencias}}</td>
+                        <td>{{amarillas}}</td>
+                        <td>{{rojas}}</td>
                         <td class="text-center">
                             <a href="/admin/estadisticas/modificar/{{id}}" title="Editar" class="btn btn-sm btn-secondary"><i class="fa fa-pencil"></i></a>
                             <a href="/admin/estadisticas/eliminar/{{id}}" title="Eliminar" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>
