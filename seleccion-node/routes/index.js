@@ -9,7 +9,7 @@ var cloudinary = require('cloudinary').v2;
 router.get('/', async function(req, res, next) {
 
   var estadisticas = await estadisticasModel.getEstadisticas();
-  estadisticas = estadisticas.splice(0, 6); // Limitar a las primeras 6 estadísticas
+  estadisticas = estadisticas.splice(0, 7); // Limitar a las primeras 6 estadísticas
   estadisticas = estadisticas.map(estadistica => {
     if (estadistica.img_id) {
       const imagen = cloudinary.url(estadistica.img_id, {
@@ -24,7 +24,7 @@ router.get('/', async function(req, res, next) {
     } else {
       return {
         ...estadistica,
-        imagen: 'images/no-image.jpg'
+        imagen
       }
     }
   });
